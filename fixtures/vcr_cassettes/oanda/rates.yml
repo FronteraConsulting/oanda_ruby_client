@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.oanda.com/rates/api/v1/rates/USD.json?date=2015-02-11&quote=GBP
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer {OANDA_API_KEY}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Feb 2015 23:41:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '311'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Oanda-Exchange-Rates-Api-Version:
+      - 1.0.2
+      X-Rate-Limit-Remaining:
+      - '99992'
+      Set-Cookie:
+      - opc_id=A5A76274-B310-11E4-8347-B169D88622F7; path=/; Expires=Sun, 09-Feb-2025
+        23:41:20 GMT
+    body:
+      encoding: UTF-8
+      string: '{"base_currency":"USD","meta":{"effective_params":{"data_set":"oanda","date":"2015-02-11","decimal_places":5,"fields":["averages"],"quote_currencies":["GBP"]},"request_time":"2015-02-12T23:41:20+0000","skipped_currencies":[]},"quotes":{"GBP":{"ask":"0.65542","bid":"0.65533","date":"2015-02-11T21:00:00+0000"}}}'
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 23:41:20 GMT
+recorded_with: VCR 2.9.3

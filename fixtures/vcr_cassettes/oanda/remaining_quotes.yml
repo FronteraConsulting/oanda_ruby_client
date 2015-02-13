@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.oanda.com/rates/api/v1/remaining_quotes.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer {OANDA_API_KEY}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Feb 2015 23:41:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '26'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Oanda-Exchange-Rates-Api-Version:
+      - 1.0.2
+      Set-Cookie:
+      - opc_id=A61A0FCC-B310-11E4-9820-ED2700000000; path=/; Expires=Sun, 09-Feb-2025
+        23:41:21 GMT
+    body:
+      encoding: UTF-8
+      string: '{"remaining_quotes":99992}'
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 23:41:21 GMT
+recorded_with: VCR 2.9.3

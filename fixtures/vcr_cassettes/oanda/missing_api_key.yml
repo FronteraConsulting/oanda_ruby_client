@@ -1,0 +1,35 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.oanda.com/rates/api/v1/remaining_quotes.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 12 Feb 2015 23:41:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '77'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      X-Oanda-Exchange-Rates-Api-Version:
+      - 1.0.2
+    body:
+      encoding: UTF-8
+      string: '{"code":8,"message":"Malformed Authorization header or invalid access
+        token"}'
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 23:41:21 GMT
+recorded_with: VCR 2.9.3
